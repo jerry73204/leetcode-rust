@@ -33,10 +33,7 @@ impl Solution {
             }
         }
 
-        (0..n_pos)
-            .find(|&idx| nums[idx] > 0)
-            .unwrap_or(n_pos) as i32
-            + 1
+        (0..n_pos).find(|&idx| nums[idx] > 0).unwrap_or(n_pos) as i32 + 1
     }
 }
 
