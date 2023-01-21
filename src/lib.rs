@@ -6,6 +6,7 @@ pub mod p290;
 pub mod p3;
 pub mod p41;
 pub mod p42;
+pub mod p520;
 pub mod p53;
 pub mod p56;
 pub mod p57;
