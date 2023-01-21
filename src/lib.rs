@@ -19,5 +19,6 @@ pub mod p2244;
 pub mod p134;
 pub mod p452;
 pub mod p144;
+pub mod p100;
 
 pub struct Solution;
