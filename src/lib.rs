@@ -14,5 +14,6 @@ pub mod p60;
 pub mod p918;
 pub mod p926;
 pub mod p974;
+pub mod p944;
 
 pub struct Solution;
