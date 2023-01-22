@@ -46,9 +46,13 @@ mod tests {
 
     #[test]
     fn p11_test() {
-        assert_eq!(Solution::max_area(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
-        assert_eq!(Solution::max_area(vec![1, 1]), 1);
-        assert_eq!(Solution::max_area(vec![1, 2, 1]), 2);
-        assert_eq!(Solution::max_area(vec![1, 2, 4, 3]), 4);
+        check(vec![1, 8, 6, 2, 5, 4, 8, 3, 7], 49);
+        check(vec![1, 1], 1);
+        check(vec![1, 2, 1], 2);
+        check(vec![1, 2, 4, 3], 4);
+    }
+
+    fn check(height: Vec<i32>, expect: i32) {
+        assert_eq!(Solution::max_area(height), expect);
     }
 }

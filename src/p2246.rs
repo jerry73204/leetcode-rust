@@ -137,13 +137,11 @@ mod tests {
 
     #[test]
     fn p2246_test() {
-        assert_eq!(
-            Solution::longest_path(vec![-1, 0, 0, 1, 1, 2], "abacbe".to_string()),
-            3
-        );
-        assert_eq!(
-            Solution::longest_path(vec![-1, 0, 0, 0,], "aabc".to_string()),
-            3
-        );
+        check(vec![-1, 0, 0, 1, 1, 2], "abacbe", 3);
+        check(vec![-1, 0, 0, 0], "aabc", 3);
+    }
+
+    fn check(parent: Vec<i32>, text: &str, expect: i32) {
+        assert_eq!(Solution::longest_path(parent, text.to_string()), expect);
     }
 }

@@ -107,22 +107,17 @@ mod tests {
 
     #[test]
     fn p3_test() {
+        check("abcabcbb", 3);
+        check("bbbbb", 1);
+        check("pwwkew", 3);
+        check("abba", 2);
+        check("skqsjdxicylkltdamomobovngougjxpb", 10);
+    }
+
+    fn check(text: &str, expect: i32) {
         assert_eq!(
-            Solution::length_of_longest_substring("abcabcbb".to_string()),
-            3
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring("bbbbb".to_string()),
-            1
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring("pwwkew".to_string()),
-            3
-        );
-        assert_eq!(Solution::length_of_longest_substring("abba".to_string()), 2);
-        assert_eq!(
-            Solution::length_of_longest_substring("skqsjdxicylkltdamomobovngougjxpb".to_string()),
-            10
+            Solution::length_of_longest_substring(text.to_string()),
+            expect
         );
     }
 }
