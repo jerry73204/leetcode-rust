@@ -5,6 +5,7 @@ pub mod p134;
 pub mod p135;
 pub mod p144;
 pub mod p1443;
+pub mod p174;
 pub mod p2244;
 pub mod p2246;
 pub mod p2421;
