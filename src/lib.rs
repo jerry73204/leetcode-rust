@@ -22,6 +22,7 @@ pub mod p290;
 pub mod p297;
 pub mod p3;
 pub mod p327;
+pub mod p352;
 pub mod p41;
 pub mod p42;
 pub mod p452;
