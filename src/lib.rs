@@ -15,6 +15,7 @@ pub mod p1523;
 pub mod p1626;
 pub mod p174;
 pub mod p1745;
+pub mod p191;
 pub mod p214;
 pub mod p217;
 pub mod p218;
@@ -38,8 +39,10 @@ pub mod p297;
 pub mod p3;
 pub mod p327;
 pub mod p33;
+pub mod p338;
 pub mod p35;
 pub mod p352;
+pub mod p371;
 pub mod p41;
 pub mod p42;
 pub mod p452;
@@ -65,8 +68,5 @@ pub mod p944;
 pub mod p974;
 pub mod p989;
 pub mod p997;
-pub mod p371;
-pub mod p191;
-
 
 pub struct Solution;
