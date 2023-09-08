@@ -3,6 +3,8 @@ use std::{collections::VecDeque, mem};
 struct MyStack {
     queue: VecDeque<i32>,
 }
+
+#[allow(unused)]
 impl MyStack {
     fn new() -> Self {
         Self {
