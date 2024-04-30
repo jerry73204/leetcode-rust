@@ -20,9 +20,9 @@ impl Solution {
         prefix_sum_mod2
             .scan([0i64; 1024], |counts, end_sum| {
                 let all_even_count = counts[end_sum as usize];
-                let one_odd_count: i64 = std::iter::successors(Some(1), |prev| Some(prev << 1))
-                    .take(10)
-                    .map(|mask| {
+                let one_odd_count: i64 = (0..10)
+                    .map(|nth| {
+                        let mask = 1 << nth;
                         let start_sum = end_sum ^ mask;
                         counts[start_sum as usize]
                     })
