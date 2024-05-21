@@ -1,3 +1,4 @@
+#[allow(unused)]
 struct WordDictionary {
     root: Box<Node>,
 }
@@ -6,6 +7,7 @@ struct WordDictionary {
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
+#[allow(unused)]
 impl WordDictionary {
     fn new() -> Self {
         Self {

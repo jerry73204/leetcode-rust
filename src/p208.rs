@@ -1,3 +1,4 @@
+#[allow(unused)]
 struct Trie {
     root: Box<Node>,
 }
@@ -6,6 +7,7 @@ struct Trie {
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
+#[allow(unused)]
 impl Trie {
     fn new() -> Self {
         Self {

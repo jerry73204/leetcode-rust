@@ -1,12 +1,8 @@
 use crate::Solution;
-use std::{
-    collections::{BTreeMap, VecDeque},
-    convert::TryInto,
-    iter::FromIterator,
-};
+use std::{collections::VecDeque, convert::TryInto, iter::FromIterator};
 
 impl Solution {
-    pub fn is_rectangle_cover(mut rectangles: Vec<Vec<i32>>) -> bool {
+    pub fn is_rectangle_cover(rectangles: Vec<Vec<i32>>) -> bool {
         let mut rectangles: Vec<_> = rectangles
             .iter()
             .map(|rect| -> &[i32; 4] {
