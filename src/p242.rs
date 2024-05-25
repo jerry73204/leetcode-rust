@@ -24,6 +24,6 @@ impl Solution {
             }
         }
 
-        char_count.iter().all(|&cnt| cnt == 0 )
+        char_count.iter().all(|&cnt| cnt == 0)
     }
 }
