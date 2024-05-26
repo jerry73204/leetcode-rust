@@ -7,6 +7,7 @@ pub struct ListNode {
 }
 
 impl ListNode {
+    #[allow(unused)]
     #[inline]
     fn new(val: i32) -> Self {
         ListNode { next: None, val }
