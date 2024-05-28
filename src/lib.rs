@@ -146,6 +146,7 @@ pub mod p92;
 pub mod p926;
 pub mod p944;
 pub mod p974;
+pub mod p979;
 pub mod p98;
 pub mod p988;
 pub mod p989;
