@@ -1,7 +1,6 @@
+use crate::Solution;
 use std::cell::RefCell;
 use std::rc::Rc;
-
-use crate::Solution;
 
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
