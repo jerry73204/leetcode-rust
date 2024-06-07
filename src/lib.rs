@@ -171,5 +171,6 @@ pub mod p98;
 pub mod p988;
 pub mod p989;
 pub mod p997;
+pub mod p931;
 
 pub struct Solution;
