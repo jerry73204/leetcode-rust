@@ -21,6 +21,7 @@ pub mod p132;
 pub mod p1325;
 pub mod p1337;
 pub mod p134;
+pub mod p1347;
 pub mod p135;
 pub mod p139;
 pub mod p140;
