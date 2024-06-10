@@ -5,6 +5,7 @@ pub mod p1026;
 pub mod p103;
 pub mod p104;
 pub mod p105;
+pub mod p1051;
 pub mod p11;
 pub mod p1143;
 pub mod p1162;
