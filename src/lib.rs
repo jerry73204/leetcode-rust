@@ -130,6 +130,7 @@ pub mod p472;
 pub mod p48;
 pub mod p49;
 pub mod p5;
+pub mod p506;
 pub mod p514;
 pub mod p520;
 pub mod p523;
