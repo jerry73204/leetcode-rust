@@ -132,6 +132,7 @@ pub mod p49;
 pub mod p5;
 pub mod p514;
 pub mod p520;
+pub mod p523;
 pub mod p53;
 pub mod p54;
 pub mod p540;
