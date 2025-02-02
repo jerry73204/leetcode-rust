@@ -8,6 +8,7 @@ pub struct SummaryRanges {
 }
 
 impl SummaryRanges {
+    #[allow(clippy::new_without_default)]
     pub fn new() -> Self {
         Self {
             nodes: vec![None; VALUE_MAX + 1],
@@ -33,10 +34,10 @@ impl SummaryRanges {
 
         let left = curr
             .checked_sub(1)
-            .and_then(|left| nodes[left].is_some().then(|| left));
+            .and_then(|left| nodes[left].is_some().then_some(left));
         let right = (curr < VALUE_MAX)
             .then(|| curr + 1)
-            .and_then(|right| (nodes[right].is_some()).then(|| right));
+            .and_then(|right| (nodes[right].is_some()).then_some(right));
 
         match (left, right) {
             (None, None) => {

@@ -47,6 +47,7 @@ fn get_two_elems_of_matrix(
     }
 }
 
+#[allow(clippy::ptr_arg)]
 fn get_two_rows_of_matrix(
     matrix: &mut Vec<Vec<i32>>,
     r1: usize,
@@ -65,6 +66,7 @@ fn get_two_rows_of_matrix(
     }
 }
 
+#[allow(clippy::ptr_arg)]
 fn get_two_elems_of_row(row: &mut Vec<i32>, c1: usize, c2: usize) -> (&mut i32, &mut i32) {
     match c1.cmp(&c2) {
         Less => {

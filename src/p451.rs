@@ -16,7 +16,7 @@ impl Solution {
         let mut counts = [0; 62];
 
         for ch in s.as_bytes() {
-            let code = a2i[&ch];
+            let code = a2i[ch];
             counts[code] += 1;
         }
 

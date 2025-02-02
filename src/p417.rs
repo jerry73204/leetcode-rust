@@ -31,7 +31,7 @@ impl Solution {
             frontiers.extend((1..ncol).map(|c| (0, c)));
 
             while let Some((r, c)) = frontiers.pop_front() {
-                let mut node = &mut nodes[r][c];
+                let node = &mut nodes[r][c];
 
                 if node.reach_pacific {
                     continue;
@@ -51,7 +51,7 @@ impl Solution {
             frontiers.extend((0..(ncol - 1)).rev().map(|c| (nrow - 1, c)));
 
             while let Some((r, c)) = frontiers.pop_front() {
-                let mut node = &mut nodes[r][c];
+                let node = &mut nodes[r][c];
 
                 if node.reach_atlantic {
                     continue;

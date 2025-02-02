@@ -1,5 +1,6 @@
 use std::cell::RefCell;
 use std::collections::VecDeque;
+use std::marker::PhantomData;
 use std::rc::Rc;
 
 // Definition for a binary tree node.
@@ -22,12 +23,15 @@ impl TreeNode {
 }
 
 pub struct Codec {
-    _private: [u8; 0],
+    _private: PhantomData<()>,
 }
 
 impl Codec {
-    pub fn new() -> Self {
-        Self { _private: [] }
+    #[allow(clippy::should_implement_trait)]
+    pub fn default() -> Self {
+        Self {
+            _private: PhantomData,
+        }
     }
 
     pub fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {

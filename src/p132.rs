@@ -22,7 +22,7 @@ fn solve_recursive(
 
     // Return cached answer if it exists
     if let Some(n_cuts) = cache[input.len()] {
-        return (n_cuts <= cut_limit).then(|| n_cuts);
+        return (n_cuts <= cut_limit).then_some(n_cuts);
     }
 
     // If cut limit is zero, return zero if the input itself is a

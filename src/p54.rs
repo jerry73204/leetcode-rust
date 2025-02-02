@@ -28,7 +28,7 @@ impl Solution {
                 (_, _) => {
                     let iter1 = matrix[bt][bl..br].iter().cloned();
                     let iter2 = ((bt + 1)..bb).map(|row| matrix[row][br - 1]);
-                    let iter3 = matrix[bb - 1][(bl..(br - 1))].iter().rev().cloned();
+                    let iter3 = matrix[bb - 1][bl..(br - 1)].iter().rev().cloned();
                     let iter4 = ((bt + 1)..(bb - 1)).rev().map(|row| matrix[row][bl]);
                     let iter = iter1.chain(iter2).chain(iter3).chain(iter4);
                     output.extend(iter);

@@ -61,8 +61,7 @@ impl Solution {
 
             let max_height = set
                 .iter()
-                .rev()
-                .next()
+                .next_back()
                 .map(|entry| entry.height)
                 .unwrap_or(0);
 

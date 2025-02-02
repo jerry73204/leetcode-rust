@@ -50,9 +50,9 @@ fn recursion(idx: usize, adj: &[Vec<usize>], nodes: &mut [Node]) -> Result<usize
 
     let level = adj[idx]
         .iter()
-        .map(|&nb| recursion(nb as usize, adj, nodes))
-        .fold(Ok(0), |max, level| -> Result<usize, usize> {
-            Ok(cmp::max(max?, level? + 1))
+        .map(|&nb| recursion(nb, adj, nodes))
+        .try_fold(0, |max, level| -> Result<usize, usize> {
+            Ok(cmp::max(max, level? + 1))
         })?;
     nodes[idx].level = Some(level);
     Ok(level)

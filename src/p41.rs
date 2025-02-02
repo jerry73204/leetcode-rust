@@ -27,7 +27,7 @@ impl Solution {
 
         for idx in 0..n_pos {
             let value = nums[idx];
-            let ref_idx = value.abs() as usize - 1;
+            let ref_idx = value.unsigned_abs() as usize - 1;
             if ref_idx < n_pos {
                 nums[ref_idx] = -nums[ref_idx].abs();
             }

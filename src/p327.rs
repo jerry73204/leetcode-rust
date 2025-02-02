@@ -1,6 +1,6 @@
 use crate::Solution;
 use std::collections::VecDeque;
-use std::{array, iter};
+use std::iter;
 
 impl Solution {
     pub fn count_range_sum(nums: Vec<i32>, lower: i32, upper: i32) -> i32 {
@@ -20,7 +20,7 @@ impl Solution {
         let mut events: Vec<_> = prefix_sum
             .enumerate()
             .flat_map(|(index, val)| {
-                array::IntoIter::new([
+                [
                     Event {
                         value: val,
                         is_phantom: false,
@@ -31,7 +31,7 @@ impl Solution {
                         is_phantom: true,
                         index,
                     },
-                ])
+                ]
             })
             .collect();
         events.sort_unstable();

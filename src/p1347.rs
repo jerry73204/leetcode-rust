@@ -10,7 +10,7 @@ impl Solution {
             .zip(t_counts)
             .filter_map(|(s_cnt, t_cnt)| {
                 let diff = s_cnt - t_cnt;
-                (diff > 0).then(|| diff)
+                (diff > 0).then_some(diff)
             })
             .sum()
     }

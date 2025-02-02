@@ -8,57 +8,49 @@ impl Solution {
 
         for idx in 0..bytes.len() {
             // Odd
-            loop {
+            {
                 let min_pad = (max_len - 1) / 2 + 1;
-                let lbound = match idx.checked_sub(min_pad) {
-                    Some(lbound) => lbound,
-                    None => break,
-                };
-                let rbound = idx + 1 + min_pad;
+                if let Some(lbound) = idx.checked_sub(min_pad) {
+                    let rbound = idx + 1 + min_pad;
 
-                let start_iter = (0..=lbound).rev();
-                let end_iter = rbound..=bytes.len();
+                    let start_iter = (0..=lbound).rev();
+                    let end_iter = rbound..=bytes.len();
 
-                for (start, end) in start_iter.zip(end_iter) {
-                    let range = start..end;
+                    for (start, end) in start_iter.zip(end_iter) {
+                        let range = start..end;
 
-                    if is_palindrome(&bytes[range.clone()]) {
-                        let len = end - start;
-                        max_len = len;
-                        max_range = range;
-                    } else {
-                        break;
+                        if is_palindrome(&bytes[range.clone()]) {
+                            let len = end - start;
+                            max_len = len;
+                            max_range = range;
+                        } else {
+                            break;
+                        }
                     }
                 }
-
-                break;
             }
 
             // Even
-            loop {
+            {
                 let min_pad = max_len / 2 + 1;
-                let lbound = match (idx + 1).checked_sub(min_pad) {
-                    Some(lbound) => lbound,
-                    None => break,
-                };
-                let rbound = idx + 1 + min_pad;
+                if let Some(lbound) = (idx + 1).checked_sub(min_pad) {
+                    let rbound = idx + 1 + min_pad;
 
-                let start_iter = (0..=lbound).rev();
-                let end_iter = rbound..=bytes.len();
+                    let start_iter = (0..=lbound).rev();
+                    let end_iter = rbound..=bytes.len();
 
-                for (start, end) in start_iter.zip(end_iter) {
-                    let range = start..end;
+                    for (start, end) in start_iter.zip(end_iter) {
+                        let range = start..end;
 
-                    if is_palindrome(&bytes[range.clone()]) {
-                        let len = end - start;
-                        max_len = len;
-                        max_range = range;
-                    } else {
-                        break;
+                        if is_palindrome(&bytes[range.clone()]) {
+                            let len = end - start;
+                            max_len = len;
+                            max_range = range;
+                        } else {
+                            break;
+                        }
                     }
                 }
-
-                break;
             }
         }
 

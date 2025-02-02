@@ -1,5 +1,5 @@
 use crate::Solution;
-use std::{array, collections::HashMap, iter};
+use std::{collections::HashMap, iter};
 
 impl Solution {
     pub fn snakes_and_ladders(board: Vec<Vec<i32>>) -> i32 {
@@ -8,7 +8,7 @@ impl Solution {
 
         // Convert input board to index-to-destination map
         let ladders: HashMap<usize, usize> = {
-            let reverse_iter = array::IntoIter::new([false, true]).cycle();
+            let reverse_iter = [false, true].into_iter().cycle();
             board
                 .into_iter()
                 .rev()

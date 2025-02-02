@@ -55,10 +55,10 @@ impl Solution {
                     .filter_map(|edge| {
                         if edge[0] == n1 {
                             let n3 = edge[1];
-                            (n3 != n2).then(|| n3)
+                            (n3 != n2).then_some(n3)
                         } else if edge[1] == n1 {
                             let n3 = edge[0];
-                            (n3 != n2).then(|| n3)
+                            (n3 != n2).then_some(n3)
                         } else if edge[0] == n2 {
                             let n3 = edge[1];
                             Some(n3)

@@ -18,10 +18,7 @@ impl Solution {
             }
         }
 
-        let min_idx = IntoIterator::into_iter(states)
-            .into_iter()
-            .filter_map(|state| state?.ok())
-            .min();
+        let min_idx = states.into_iter().filter_map(|state| state?.ok()).min();
         match min_idx {
             Some(idx) => idx as i32,
             None => -1,

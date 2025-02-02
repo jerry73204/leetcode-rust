@@ -26,8 +26,8 @@ mod tests {
         let mut rng = rand::thread_rng();
 
         for _ in 0..10000 {
-            let a = rng.gen_range(-1000, 1000);
-            let b = rng.gen_range(-1000, 1000);
+            let a = rng.gen_range(-1000..=1000);
+            let b = rng.gen_range(-1000..=1000);
             let sum = a + b;
             let ans = Solution::get_sum(a, b);
             assert_eq!(ans, a + b, "{a} + {b} = {sum}, but get {ans}");

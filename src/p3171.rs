@@ -44,12 +44,10 @@ impl Solution {
                     } else {
                         break *start - 1;
                     }
+                } else if run < *end {
+                    *start = std::cmp::max(*start, run + 1);
                 } else {
-                    if run < *end {
-                        *start = std::cmp::max(*start, run + 1);
-                    } else {
-                        break *end;
-                    }
+                    break *end;
                 }
             };
 

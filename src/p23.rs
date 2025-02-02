@@ -32,7 +32,7 @@ impl Eq for OrdListNode {}
 
 impl PartialOrd<OrdListNode> for OrdListNode {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        self.0.val.partial_cmp(&other.0.val)
+        Some(self.cmp(other))
     }
 }
 

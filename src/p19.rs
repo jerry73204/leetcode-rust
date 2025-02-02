@@ -44,7 +44,7 @@ impl Solution {
             writer_head = writer_head.unwrap().next.as_mut();
         }
 
-        let mut writer_head = writer_head.unwrap();
+        let writer_head = writer_head.unwrap();
         writer_head.next = writer_head.next.take().unwrap().next;
 
         head

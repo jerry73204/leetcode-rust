@@ -246,7 +246,7 @@ impl Eq for Entry {}
 
 impl PartialOrd for Entry {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        self.weight.partial_cmp(&other.weight)
+        Some(self.cmp(other))
     }
 }
 
@@ -272,11 +272,7 @@ impl Eq for Weight {}
 
 impl PartialOrd for Weight {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        match self.use_count.partial_cmp(&other.use_count) {
-            Some(Ordering::Equal) => {}
-            ord => return ord,
-        }
-        self.epoch.partial_cmp(&other.epoch)
+        Some(self.cmp(other))
     }
 }
 

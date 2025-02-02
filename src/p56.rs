@@ -51,11 +51,7 @@ pub struct Mark {
 
 impl PartialOrd for Mark {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        match self.value.partial_cmp(&other.value) {
-            Some(Equal) => {}
-            ord => return ord,
-        }
-        self.is_end.partial_cmp(&other.is_end)
+        Some(self.cmp(other))
     }
 }
 

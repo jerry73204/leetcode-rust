@@ -7,9 +7,9 @@ impl Solution {
             .as_bytes()
             .iter()
             .filter_map(|&ch| {
-                if (b'a'..=b'z').contains(&ch) || (b'0'..=b'9').contains(&ch) {
+                if ch.is_ascii_lowercase() || ch.is_ascii_digit() {
                     Some(ch)
-                } else if (b'A'..=b'Z').contains(&ch) {
+                } else if ch.is_ascii_uppercase() {
                     Some(ch - b'A' + b'a')
                 } else {
                     None

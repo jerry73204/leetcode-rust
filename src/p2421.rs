@@ -94,8 +94,8 @@ impl Solution {
                     });
 
                 let num_paths_for_value: usize = counts
-                    .into_iter()
-                    .map(|(_, count)| count * (count - 1) / 2)
+                    .into_values()
+                    .map(|count| count * (count - 1) / 2)
                     .sum();
 
                 num_paths_for_value

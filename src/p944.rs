@@ -22,7 +22,7 @@ impl Solution {
                     false
                 })
             });
-            let is_lex_order = (&mut check_iter).all(|is_lex_order| is_lex_order);
+            let is_lex_order = check_iter.all(|is_lex_order| is_lex_order);
 
             // Consume remaining chars
             check_iter.for_each(|_| {});

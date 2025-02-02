@@ -36,8 +36,8 @@ impl Solution {
 
         final_state
             .remainder_counts
-            .into_iter()
-            .map(|(_rem, count)| count * (count - 1) / 2)
+            .into_values()
+            .map(|count| count * (count - 1) / 2)
             .sum()
     }
 }

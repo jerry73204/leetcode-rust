@@ -40,7 +40,7 @@ impl Solution {
 }
 
 fn adder(abit: bool, bbit: bool, carry: bool) -> (bool, bool) {
-    let new_carry = (abit && bbit) || (abit && carry) || (bbit && carry);
+    let new_carry = (carry || bbit) && abit || (bbit && carry);
     let new_bit = abit ^ bbit ^ carry;
     (new_carry, new_bit)
 }

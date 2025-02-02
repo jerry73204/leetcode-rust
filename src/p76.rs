@@ -114,7 +114,7 @@ fn count_chars(slice: &[u8]) -> [usize; N_CHARS] {
 }
 
 fn char_to_code(ch: u8) -> usize {
-    (if (b'A'..=b'Z').contains(&ch) {
+    (if ch.is_ascii_uppercase() {
         ch - b'A'
     } else {
         // in a..z

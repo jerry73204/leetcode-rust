@@ -13,9 +13,8 @@ impl Solution {
         let pld2: HashSet<Range<usize>> = input
             .char_indices()
             .zip(input.chars().skip(1))
-            .filter_map(|((start, lsymbol), rsymbol)| {
-                (lsymbol == rsymbol).then(|| start..(start + 2))
-            })
+            .filter(|&((_start, lsymbol), rsymbol)| (lsymbol == rsymbol))
+            .map(|((start, _lsymbol), _rsymbol)| start..(start + 2))
             .collect();
 
         // Generate a stack of palindromes indexed by palindrome length

@@ -59,11 +59,11 @@ impl Solution {
 
                     let right = {
                         let new_row = row + 1;
-                        (new_row < nrows).then(|| (new_row, col))
+                        (new_row < nrows).then_some((new_row, col))
                     };
                     let lower = {
                         let new_col = col + 1;
-                        (new_col < ncols).then(|| (row, new_col))
+                        (new_col < ncols).then_some((row, new_col))
                     };
                     let left = row.checked_sub(1).map(|new_row| (new_row, col));
                     let upper = col.checked_sub(1).map(|new_col| (row, new_col));

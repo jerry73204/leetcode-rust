@@ -39,7 +39,7 @@ impl Solution {
         let mut bound = (Bound::Unbounded, Bound::Unbounded);
 
         loop {
-            let node = root.unwrap();
+            let node = root.clone().unwrap();
             let node_ref = node.borrow();
             let val = node_ref.val;
 
@@ -53,12 +53,12 @@ impl Solution {
 
             match (has_p, has_q) {
                 (true, true) => {
-                    root = node_ref.left.clone();
+                    root.clone_from(&node_ref.left);
                     bound = lbound;
                     continue;
                 }
                 (false, false) => {
-                    root = node_ref.right.clone();
+                    root.clone_from(&node_ref.right);
                     bound = (Bound::Excluded(val), bound.1);
                     continue;
                 }

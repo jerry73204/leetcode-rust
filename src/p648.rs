@@ -1,5 +1,4 @@
 use crate::Solution;
-use std::mem::MaybeUninit;
 
 impl Solution {
     pub fn replace_words(dictionary: Vec<String>, sentence: String) -> String {
@@ -11,15 +10,10 @@ impl Solution {
 
         impl Default for Node {
             fn default() -> Self {
-                let mut children: [MaybeUninit<Option<Box<Node>>>; 26] =
-                    unsafe { MaybeUninit::uninit().assume_init() };
-
-                for child in children.iter_mut() {
-                    *child = MaybeUninit::new(None);
-                }
+                const NONE_NODE: Option<Box<Node>> = None;
 
                 Self {
-                    children: unsafe { std::mem::transmute(children) },
+                    children: [NONE_NODE; 26],
                     mark: false,
                 }
             }

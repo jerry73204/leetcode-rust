@@ -36,7 +36,7 @@ impl Solution {
             }
         }
 
-        team_set.iter().rev().next().unwrap().sum_score.0
+        team_set.iter().next_back().unwrap().sum_score.0
     }
 }
 
