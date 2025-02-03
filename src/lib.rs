@@ -172,6 +172,7 @@ pub mod p787;
 pub mod p79;
 pub mod p8;
 pub mod p826;
+pub mod p827;
 pub mod p834;
 pub mod p9;
 pub mod p907;
