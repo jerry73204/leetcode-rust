@@ -1,3 +1,6 @@
+//! # 1980. Find Unique Binary String
+//! [Submission](https://leetcode.com/problems/find-unique-binary-string/submissions/1549650368)
+
 use crate::Solution;
 use std::iter::repeat;
 
