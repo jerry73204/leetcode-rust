@@ -1,3 +1,6 @@
+//! 1079. Letter Tile Possibilities
+//! [Submission](https://leetcode.com/problems/letter-tile-possibilities/submissions/1546263227)
+
 use crate::Solution;
 use std::cmp::min;
 
@@ -8,7 +11,6 @@ impl Solution {
         let mut counts = [0; 26];
 
         for &letter in tiles.as_bytes() {
-            // *counts.entry(letter).or_insert(0) += 1;
             let idx = (letter - b'A') as usize;
             counts[idx] += 1;
         }
