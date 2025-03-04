@@ -55,6 +55,7 @@ pub mod p174;
 pub mod p1745;
 pub mod p1749;
 pub mod p1752;
+pub mod p1780;
 pub mod p1790;
 pub mod p1800;
 pub mod p19;
